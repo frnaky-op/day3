@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Knowledge Explorer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="lib/ckeditor/ckeditor.js" defer></script>
+    <script src="js/jquery.js" defer></script>
+    <script src="js/Link.js" defer></script>
+    <script src="js/Node.js" defer></script>
+    <script src="js/RouteEditor.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<div class="mode" id="editMode">
+    <img id="logo" src="img/knowledge%20explorer.png" alt="logo">
+</div>
+<div class="mode" id="viewMode">
+    <div id="viewGroup">
+        <div id="viewBar">
+            <button class="btn" id="btnFullScreen"></button>
+        </div>
+        <div id="slideBtnGroup">
+            <button class="btn" data-direction="1" data-label=""></button>
+            <button class="btn" data-direction="2" data-label=""></button>
+            <button class="btn" data-direction="3" data-label=""></button>
+            <button class="btn" data-direction="4" data-label=""></button>
+        </div>
+    </div>
+</div>
+<div id="modeBtnGroup">
+    <button class="btn current" data-mode="edit">EDIT</button>
+    <button class="btn" data-mode="view">VIEW</button>
+</div>
+<div id="editorContainer">
+    <button class="btn" id="btnCloseEditor"></button>
+    <div id="editor"></div>
+    <div id="relationGroup">
+        <div class="relation" data-direction="1">
+            <span class="relation-label">NO RELATION</span>
+            <input class="relation-input" placeholder="relation 1">
+        </div>
+        <div class="relation" data-direction="2">
+            <span class="relation-label">NO RELATION</span>
+            <input class="relation-input" placeholder="relation 2">
+        </div>
+        <div class="relation" data-direction="4">
+            <span class="relation-label">NO RELATION</span>
+            <input class="relation-input" placeholder="relation 4">
+        </div>
+        <div class="relation" data-direction="3">
+            <span class="relation-label">NO RELATION</span>
+            <input class="relation-input" placeholder="relation 3">
+        </div>
+    </div>
+</div>
+
+<div id="templateGroup" hidden>
+    <div class="node" id="nodeTemplate">
+        <div id="directionGroup">
+            <div class="direction" data-direction="1"></div>
+            <div class="direction" data-direction="2"></div>
+            <div class="direction" data-direction="4"></div>
+            <div class="direction" data-direction="3"></div>
+        </div>
+        <button class="btn btn-delete"></button>
+        <button class="btn btn-edit"></button>
+    </div>
+    <div class="link" id="linkTemplate"></div>
+    <div class="drag" id="dragTemplate"></div>
+    <div class="slide" id="slideTemplate"></div>
+</div>
+</body>
+</html>
